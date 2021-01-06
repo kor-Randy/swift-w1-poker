@@ -7,5 +7,6 @@
 
 import Foundation
 
-print("Hello, World!")
-
+func printHello() -> String{
+    "Hello, World!"
+}
