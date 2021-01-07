@@ -59,10 +59,21 @@ class GameTable{
     
     //게임 결과 오픈
     func resultOfGame(){
-        dealer.printCards()
-        self.players.forEach {
+        var allOfPairs: [Player] = []
+        
+        allOfPairs.append(contentsOf: self.players)
+        allOfPairs.append(dealer)
+        
+        allOfPairs.forEach {
             $0.printCards()
         }
+        
+        allOfPairs.sort{
+            $0 > $1
+        }
+        
+        print("우승 : \(allOfPairs[0].name)")
+        
     }
     
     //새로운 플레이어 진입

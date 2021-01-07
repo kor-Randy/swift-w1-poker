@@ -24,6 +24,11 @@
 		C2E630D225A6D23B005B2733 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E630AE25A6B3FB005B2733 /* Player.swift */; };
 		C2E630D725A6D23D005B2733 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E630B325A6B41C005B2733 /* Dealer.swift */; };
 		C2E630E125A6D466005B2733 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307325A6935D005B2733 /* Card.swift */; };
+		C2E630F525A6E2AA005B2733 /* PlayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E630F425A6E2AA005B2733 /* PlayerTest.swift */; };
+		C2E630FF25A6E2B0005B2733 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E630AE25A6B3FB005B2733 /* Player.swift */; };
+		C2E6310525A6E2B4005B2733 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307325A6935D005B2733 /* Card.swift */; };
+		C2E6310C25A6E46B005B2733 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6310B25A6E46B005B2733 /* Util.swift */; };
+		C2E6311225A6E502005B2733 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6310B25A6E46B005B2733 /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +60,10 @@
 		C2E630BC25A6D22B005B2733 /* GameTableTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameTableTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E630BE25A6D22B005B2733 /* GameTableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableTest.swift; sourceTree = "<group>"; };
 		C2E630C025A6D22B005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E630F225A6E2AA005B2733 /* PlayerTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E630F425A6E2AA005B2733 /* PlayerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTest.swift; sourceTree = "<group>"; };
+		C2E630F625A6E2AA005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E6310B25A6E46B005B2733 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2E630EF25A6E2AA005B2733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +112,7 @@
 				C2E6307B25A695E2005B2733 /* CardTest */,
 				C2E6309325A6A2A3005B2733 /* DeckTest */,
 				C2E630BD25A6D22B005B2733 /* GameTableTest */,
+				C2E630F325A6E2AA005B2733 /* PlayerTest */,
 				C2E6304925A5595C005B2733 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +124,7 @@
 				C2E6307A25A695E2005B2733 /* CardTest.xctest */,
 				C2E6309225A6A2A3005B2733 /* DeckTest.xctest */,
 				C2E630BC25A6D22B005B2733 /* GameTableTest.xctest */,
+				C2E630F225A6E2AA005B2733 /* PlayerTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +138,7 @@
 				C2E630A925A6B3F3005B2733 /* GameTable.swift */,
 				C2E630AE25A6B3FB005B2733 /* Player.swift */,
 				C2E630B325A6B41C005B2733 /* Dealer.swift */,
+				C2E6310B25A6E46B005B2733 /* Util.swift */,
 			);
 			path = Poker;
 			sourceTree = "<group>";
@@ -149,6 +168,15 @@
 				C2E630C025A6D22B005B2733 /* Info.plist */,
 			);
 			path = GameTableTest;
+			sourceTree = "<group>";
+		};
+		C2E630F325A6E2AA005B2733 /* PlayerTest */ = {
+			isa = PBXGroup;
+			children = (
+				C2E630F425A6E2AA005B2733 /* PlayerTest.swift */,
+				C2E630F625A6E2AA005B2733 /* Info.plist */,
+			);
+			path = PlayerTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +250,23 @@
 			productReference = C2E630BC25A6D22B005B2733 /* GameTableTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C2E630F125A6E2AA005B2733 /* PlayerTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2E630F725A6E2AA005B2733 /* Build configuration list for PBXNativeTarget "PlayerTest" */;
+			buildPhases = (
+				C2E630EE25A6E2AA005B2733 /* Sources */,
+				C2E630EF25A6E2AA005B2733 /* Frameworks */,
+				C2E630F025A6E2AA005B2733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayerTest;
+			productName = PlayerTest;
+			productReference = C2E630F225A6E2AA005B2733 /* PlayerTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -243,6 +288,9 @@
 					C2E630BB25A6D22B005B2733 = {
 						CreatedOnToolsVersion = 12.3;
 					};
+					C2E630F125A6E2AA005B2733 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 				};
 			};
 			buildConfigurationList = C2E6304325A5595C005B2733 /* Build configuration list for PBXProject "Poker" */;
@@ -262,6 +310,7 @@
 				C2E6307925A695E2005B2733 /* CardTest */,
 				C2E6309125A6A2A3005B2733 /* DeckTest */,
 				C2E630BB25A6D22B005B2733 /* GameTableTest */,
+				C2E630F125A6E2AA005B2733 /* PlayerTest */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +337,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2E630F025A6E2AA005B2733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -299,6 +355,7 @@
 				C2E6308A25A69C29005B2733 /* Deck.swift in Sources */,
 				C2E630B425A6B41C005B2733 /* Dealer.swift in Sources */,
 				C2E6304C25A5595C005B2733 /* main.swift in Sources */,
+				C2E6310C25A6E46B005B2733 /* Util.swift in Sources */,
 				C2E630AF25A6B3FB005B2733 /* Player.swift in Sources */,
 				C2E6307425A6935D005B2733 /* Card.swift in Sources */,
 			);
@@ -333,6 +390,17 @@
 				C2E630C825A6D233005B2733 /* GameTable.swift in Sources */,
 				C2E630D725A6D23D005B2733 /* Dealer.swift in Sources */,
 				C2E630BF25A6D22B005B2733 /* GameTableTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2E630EE25A6E2AA005B2733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E630FF25A6E2B0005B2733 /* Player.swift in Sources */,
+				C2E6310525A6E2B4005B2733 /* Card.swift in Sources */,
+				C2E630F525A6E2AA005B2733 /* PlayerTest.swift in Sources */,
+				C2E6311225A6E502005B2733 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +652,42 @@
 			};
 			name = Release;
 		};
+		C2E630F825A6E2AA005B2733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 46A8TRH8G6;
+				INFOPLIST_FILE = PlayerTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daumkakao.PlayerTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C2E630F925A6E2AA005B2733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 46A8TRH8G6;
+				INFOPLIST_FILE = PlayerTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daumkakao.PlayerTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -628,6 +732,15 @@
 			buildConfigurations = (
 				C2E630C225A6D22B005B2733 /* Debug */,
 				C2E630C325A6D22B005B2733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2E630F725A6E2AA005B2733 /* Build configuration list for PBXNativeTarget "PlayerTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2E630F825A6E2AA005B2733 /* Debug */,
+				C2E630F925A6E2AA005B2733 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -31,23 +31,25 @@ struct Card{
     }
     
     private func convertNumToString() -> String{
-        if num == 0 {
-            return "Joker"
-        } else if num == 1{
-            return "A"
-        } else if num == 11{
-            return "J"
-        } else if num == 12{
-            return "Q"
-        } else if num == 13{
-            return "K"
-        } else{
-            return String(num)
-        }
+        return Util.convertFromNumToString(num: num)
     }
     
-    
-    
-    
 }
+
+extension Card.Shape: Comparable{
+    static func <(lhs: Card.Shape, rhs: Card.Shape) -> Bool{
+        lhs.rawValue < rhs.rawValue
+    }
+}
+
+extension Card: Comparable{
+    static func <(lhs: Card, rhs: Card) -> Bool{
+        if lhs.num != rhs.num{
+            return lhs.num < rhs.num
+        }else{
+            return lhs.shape < rhs.shape
+        }
+    }
+}
+
 
