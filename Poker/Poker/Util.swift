@@ -8,7 +8,6 @@
 import Foundation
 
 struct Util{
-    
     static func convertFromNumToString(num: Int) -> String{
         if num == 0 {
             return "Joker"

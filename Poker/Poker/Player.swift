@@ -14,9 +14,9 @@ class Player{
     }
     
     let name: String
-    var cards: [Card] = []
-    var money: Int?
-    var pair: Pair = Pair(num: 0, duplicate: 0)
+    private var cards: [Card] = []
+    private var money: Int?
+    private var pair: Pair = Pair(num: 0, duplicate: 0)
     
     init(name: String) {
         self.name = name
@@ -24,6 +24,10 @@ class Player{
     init(name: String, money: Int){
         self.name = name
         self.money = money
+    }
+    
+    func getCard(card: Card){
+        self.cards.append(card)
     }
     
     //정렬된 카드 출력
@@ -47,18 +51,18 @@ class Player{
         return self.pair
     }
     
-    func printPairs(pair: Pair){
+    private func printPairs(pair: Pair){
         print(pair.description)
     }
     
-    //갖고 있는 페어 확인
-    func numberOfPairs() -> [Pair]{
+    //Player의 갖고 있는 페어 확인
+    private func numberOfPairs() -> [Pair]{
         var pairs : [Pair] = []
         var countOfDuplicate = 0 // 중복횟수
         
-        for index in 0..<self.cards.count - 1{
-            let number = self.cards[index].num
-            let next = self.cards[index + 1].num
+        for index in 0 ..< self.cards.count - 1{
+            let number = self.cards[index].num.rawValue
+            let next = self.cards[index + 1].num.rawValue
             
             if number == next{
                 //중복 횟수 ++

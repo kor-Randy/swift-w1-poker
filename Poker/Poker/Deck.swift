@@ -25,31 +25,26 @@ struct Deck{
             if shape == .joker{
                 continue
             }
-            for num in 1...13{
-                self.cardDeck.append(Card(shape: shape, num: num))
+            for cardNum in Card.CardNum.allCases{
+                if cardNum == .joker{
+                    continue
+                }
+                self.cardDeck.append(Card(shape: shape, num: cardNum))
             }
         }
         
-        self.cardDeck.append(Card(shape: .joker, num: 0))
-        
-        print("카드 전체를 초기화 했습니다.")
-        print("총 \(self.count)장의 카드가 있습니다.")
+        self.cardDeck.append(Card(shape: .joker, num: .joker))
         
         return shuffleDeck()
     }
     
     mutating func shuffleDeck() -> Self{
-        print("총 \(self.count)장의 카드를 섞었습니다.")
-        
         self.cardDeck.shuffle()
         return self
     }
     
     mutating func removeOne() -> Card?{
         let cardOnTop = cardDeck.removeFirst()
-        
-        print(cardOnTop.description)
-        print("총 \(self.count)장의 카드가 남아있습니다.")
         
         return count > 0 ? cardOnTop : nil
     }
