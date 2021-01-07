@@ -8,5 +8,13 @@
 import Foundation
 
 class Player{
+    let name: String
+    var cards: [Card]
+    var money: Int
+    
+    init(name: String, money: Int) {
+        self.name = name
+        self.money = money
+    }
     
 }
