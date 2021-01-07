@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C2E6304C25A5595C005B2733 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6304B25A5595C005B2733 /* main.swift */; };
+		C2E6307425A6935D005B2733 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307325A6935D005B2733 /* Card.swift */; };
+		C2E6307D25A695E2005B2733 /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307C25A695E2005B2733 /* CardTest.swift */; };
+		C2E6308425A695E6005B2733 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307325A6935D005B2733 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,21 @@
 /* Begin PBXFileReference section */
 		C2E6304825A5595C005B2733 /* Poker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Poker; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E6304B25A5595C005B2733 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C2E6307325A6935D005B2733 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C2E6307A25A695E2005B2733 /* CardTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E6307C25A695E2005B2733 /* CardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTest.swift; sourceTree = "<group>"; };
+		C2E6307E25A695E2005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C2E6304525A5595C005B2733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2E6307725A695E2005B2733 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E6304A25A5595C005B2733 /* Poker */,
+				C2E6307B25A695E2005B2733 /* CardTest */,
 				C2E6304925A5595C005B2733 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E6304825A5595C005B2733 /* Poker */,
+				C2E6307A25A695E2005B2733 /* CardTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +74,18 @@
 			isa = PBXGroup;
 			children = (
 				C2E6304B25A5595C005B2733 /* main.swift */,
+				C2E6307325A6935D005B2733 /* Card.swift */,
 			);
 			path = Poker;
+			sourceTree = "<group>";
+		};
+		C2E6307B25A695E2005B2733 /* CardTest */ = {
+			isa = PBXGroup;
+			children = (
+				C2E6307C25A695E2005B2733 /* CardTest.swift */,
+				C2E6307E25A695E2005B2733 /* Info.plist */,
+			);
+			path = CardTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +108,23 @@
 			productReference = C2E6304825A5595C005B2733 /* Poker */;
 			productType = "com.apple.product-type.tool";
 		};
+		C2E6307925A695E2005B2733 /* CardTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2E6307F25A695E2005B2733 /* Build configuration list for PBXNativeTarget "CardTest" */;
+			buildPhases = (
+				C2E6307625A695E2005B2733 /* Sources */,
+				C2E6307725A695E2005B2733 /* Frameworks */,
+				C2E6307825A695E2005B2733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardTest;
+			productName = CardTest;
+			productReference = C2E6307A25A695E2005B2733 /* CardTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +135,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					C2E6304725A5595C005B2733 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					C2E6307925A695E2005B2733 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -110,9 +156,20 @@
 			projectRoot = "";
 			targets = (
 				C2E6304725A5595C005B2733 /* Poker */,
+				C2E6307925A695E2005B2733 /* CardTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2E6307825A695E2005B2733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2E6304425A5595C005B2733 /* Sources */ = {
@@ -120,6 +177,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E6304C25A5595C005B2733 /* main.swift in Sources */,
+				C2E6307425A6935D005B2733 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2E6307625A695E2005B2733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E6307D25A695E2005B2733 /* CardTest.swift in Sources */,
+				C2E6308425A695E6005B2733 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +330,42 @@
 			};
 			name = Release;
 		};
+		C2E6308025A695E2005B2733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 46A8TRH8G6;
+				INFOPLIST_FILE = CardTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daumkakao.CardTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C2E6308125A695E2005B2733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 46A8TRH8G6;
+				INFOPLIST_FILE = CardTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daumkakao.CardTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -280,6 +383,15 @@
 			buildConfigurations = (
 				C2E6305025A5595C005B2733 /* Debug */,
 				C2E6305125A5595C005B2733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2E6307F25A695E2005B2733 /* Build configuration list for PBXNativeTarget "CardTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2E6308025A695E2005B2733 /* Debug */,
+				C2E6308125A695E2005B2733 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
