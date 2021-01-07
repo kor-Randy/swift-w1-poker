@@ -8,7 +8,8 @@
 import Foundation
 
 class Card{
-    enum Shape: String{
+    //enum Type case 별 Loop를 위해 CaseIterable 채택
+    enum Shape: String, CaseIterable{
         case spade = "♠"
         case club = "♣"
         case heart = "♥"
@@ -19,12 +20,16 @@ class Card{
     private(set) var shape: Shape
     private(set) var num: Int
     
+    var description: String{
+        "\(self.shape.rawValue)\(self.convertNumToString(num: self.num))"
+    }
+    
     init(shape: Shape, num: Int){
         self.shape = shape
         self.num = num
     }
     
-    func convertNumToString(num: Int) -> String{
+    private func convertNumToString(num: Int) -> String{
         if self.num == 1{
             return "A"
         } else if self.num == 11{
@@ -38,11 +43,7 @@ class Card{
         }
     }
     
-    var description: String{
-        get{
-            "\(self.shape.rawValue)\(self.convertNumToString(num: self.num))"
-        }
-    }
+    
     
     
 }

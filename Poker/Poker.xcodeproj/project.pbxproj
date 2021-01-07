@@ -11,6 +11,7 @@
 		C2E6307425A6935D005B2733 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307325A6935D005B2733 /* Card.swift */; };
 		C2E6307D25A695E2005B2733 /* CardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307C25A695E2005B2733 /* CardTest.swift */; };
 		C2E6308425A695E6005B2733 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6307325A6935D005B2733 /* Card.swift */; };
+		C2E6308A25A69C29005B2733 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6308925A69C29005B2733 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		C2E6307A25A695E2005B2733 /* CardTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E6307C25A695E2005B2733 /* CardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTest.swift; sourceTree = "<group>"; };
 		C2E6307E25A695E2005B2733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E6308925A69C29005B2733 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				C2E6304B25A5595C005B2733 /* main.swift */,
 				C2E6307325A6935D005B2733 /* Card.swift */,
+				C2E6308925A69C29005B2733 /* Deck.swift */,
 			);
 			path = Poker;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E6308A25A69C29005B2733 /* Deck.swift in Sources */,
 				C2E6304C25A5595C005B2733 /* main.swift in Sources */,
 				C2E6307425A6935D005B2733 /* Card.swift in Sources */,
 			);
