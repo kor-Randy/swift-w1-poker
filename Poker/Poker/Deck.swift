@@ -35,7 +35,7 @@ struct Deck{
         print("카드 전체를 초기화 했습니다.")
         print("총 \(self.count)장의 카드가 있습니다.")
         
-        return self
+        return shuffleDeck()
     }
     
     mutating func shuffleDeck() -> Self{

@@ -12,16 +12,21 @@ class GameTable{
     //N - 카드 게임 종류
     private var numberOfCard: Int
     //딜러 1명
-    let dealer: Dealer
+    let dealer: Dealer = Dealer(name: "Dealer")
     //참가자 1~4명
-    var players: [Player]
-    let deck: Deck
+    private var players: [Player] = []
+    private var deck: Deck = Deck()
     
-    //남은 카드로 진행이 가능한가?
-    private func isAvailable() -> Bool{
+    init(numberOfCard: Int) {
+        self.numberOfCard = numberOfCard
+    }
+    
+    //남은 카드로 진행이 가능한가? private
+    func isAvailable() -> Bool{
         deck.count >= numberOfCard ? true : false
     }
     
+    //새로운 게임 시작
     func startNewGame(){
         if isAvailable(){
             distributeCard()
@@ -32,18 +37,36 @@ class GameTable{
         }
     }
     
+    //카드 나눠주기 private
     func distributeCard(){
         for _ in 1...numberOfCard{
-            dealer.cards.append(deck.removeOne())
+            if let removeCard = deck.removeOne(){
+                dealer.cards.append(removeCard)
+            }else{
+                print("덱에 카드가 존재하지 않습니다. 덱의 카드를 새로 갈아주세요.")
+            }
         }
         players.forEach { player in
             for _ in 1...numberOfCard{
-                player.cards.append(deck.removeOne())
+                if let removeCard = deck.removeOne(){
+                    player.cards.append(removeCard)
+                }else{
+                    print("덱에 카드가 존재하지 않습니다. 덱의 카드를 새로 갈아주세요.")
+                }
             }
         }
     }
     
-    func enterPlayerInGame(newPlayer: Player) -> Bool{
+    //게임 결과 오픈
+    func resultOfGame(){
+        dealer.printCards()
+        self.players.forEach {
+            $0.printCards()
+        }
+    }
+    
+    //새로운 플레이어 진입
+    func enterPlayerInGame(_ newPlayer: Player) -> Bool{
         if players.count >= 4{
             return false
         } else{
@@ -52,6 +75,7 @@ class GameTable{
         }
     }
     
+    //플레이어 나감
     func leavePlayerInGame(name: String){
         self.players.enumerated().forEach {
             if $0.element.name == name{
