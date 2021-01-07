@@ -40,7 +40,7 @@ class Card{
     
     var description: String{
         get{
-            "\(self.shape)\(self.convertNumToString(num: self.num))"
+            "\(self.shape.rawValue)\(self.convertNumToString(num: self.num))"
         }
     }
     

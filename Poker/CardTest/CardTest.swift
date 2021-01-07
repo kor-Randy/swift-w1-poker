@@ -8,9 +8,9 @@
 import XCTest
 
 class CardTest: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+         
     }
 
     override func tearDownWithError() throws {
@@ -21,12 +21,15 @@ class CardTest: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testNumToString_AfterInitializeCard_Success() throws {
+        let card = Card(shape: .heart, num: 12)
+        XCTAssertEqual(card.description, "♥Q")
+    }
+    
+    func testNumToString_AfterInitializeCard_Fail() throws {
+        let card = Card(shape: .heart, num: 12)
+        XCTAssertNotEqual(card.description, "♥K")
     }
 
 }
