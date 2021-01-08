@@ -9,14 +9,14 @@ import Foundation
 
 class Player{
     struct Pair{
-        var num: Int
+        var num: CardNum
         var duplicate: Int
     }
     
     let name: String
     private var cards: [Card] = []
     private var money: Int?
-    private var pair: Pair = Pair(num: 0, duplicate: 0)
+    private var pair: Pair = Pair(num: .none, duplicate: 0)
     
     init(name: String) {
         self.name = name
@@ -47,7 +47,7 @@ class Player{
         pairs.sort{
             $0 > $1
         }
-        self.pair = pairs.first ?? Pair(num: 0, duplicate: 0)
+        self.pair = pairs.first ?? Pair(num: .none, duplicate: 0)
         return self.pair
     }
     
@@ -61,10 +61,10 @@ class Player{
         var countOfDuplicate = 0 // 중복횟수
         
         for index in 0 ..< self.cards.count - 1{
-            let number = self.cards[index].num.rawValue
-            let next = self.cards[index + 1].num.rawValue
+            let number = self.cards[index].num
+            let next = self.cards[index + 1].num
             
-            if number == next{
+            if number.rawValue == next.rawValue{
                 //중복 횟수 ++
                 countOfDuplicate += 1
                 if index == self.cards.count - 2{
@@ -88,7 +88,7 @@ extension Player.Pair: Comparable{
         if lhs.duplicate != rhs.duplicate{
             return lhs.duplicate < rhs.duplicate
         }else{
-            return lhs.num < rhs.num
+            return lhs.num.rawValue < rhs.num.rawValue
         }
     }
     
@@ -97,11 +97,11 @@ extension Player.Pair: Comparable{
             return "페어가 없습니다."
         }
         else if self.duplicate == 1{
-            return "원페어 - \(Util.convertFromNumToString(num: self.num))"
+            return "원페어 - \(self.num.convertFromNumToString())"
         } else if self.duplicate == 2{
-            return "트리플 - \(Util.convertFromNumToString(num: self.num))"
+            return "트리플 - \(self.num.convertFromNumToString())"
         } else{
-            return "포카드 - \(Util.convertFromNumToString(num: self.num))"
+            return "포카드 - \(self.num.convertFromNumToString())"
         }
     }
 }
@@ -115,7 +115,7 @@ extension Player: Comparable, Equatable{
         if lhs.pair.duplicate != rhs.pair.duplicate{
             return lhs.pair.duplicate < rhs.pair.duplicate
         }else{
-            return lhs.pair.num < rhs.pair.num
+            return lhs.pair.num.rawValue < rhs.pair.num.rawValue
         }
     }
 }
