@@ -8,6 +8,7 @@
 import Foundation
 
 struct Util{
+    //Enum 타입인 CardNum에 extension으로 옮기기
     static func convertFromNumToString(num: Int) -> String{
         if num == 0 {
             return "Joker"
