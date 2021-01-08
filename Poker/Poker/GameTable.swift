@@ -50,7 +50,7 @@ class GameTable{
     func distributeCard(){
         for _ in 1...numberOfCard.rawValue{
             if let removeCard = deck.removeOne(){
-                dealer.getCard(card: removeCard)
+                dealer.getCardForDeck(card: removeCard)
                 
                 print(removeCard.description)
             }
@@ -59,7 +59,7 @@ class GameTable{
         for player in players{
             for _ in 1...numberOfCard.rawValue{
                 if let removeCard = deck.removeOne(){
-                    player.getCard(card: removeCard)
+                    player.getCardForDeck(card: removeCard)
                     
                     print(removeCard.description)
                 }
@@ -75,7 +75,8 @@ class GameTable{
         allOfPairs.append(dealer)
         
         allOfPairs.forEach {
-            $0.printCards()
+            print($0.getCards())
+            print($0.getPair())
         }
         
         allOfPairs.sort{

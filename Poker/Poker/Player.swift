@@ -26,33 +26,28 @@ class Player{
         self.money = money
     }
     
-    func getCard(card: Card){
+    func getCardForDeck(card: Card){
         self.cards.append(card)
     }
     
     //정렬된 카드 출력
-    func printCards(){
+    func getCards() -> String{
         self.cards.sort {
             $0 < $1
         }
-        print("Name : \(name)", terminator: " ")
-        print(self.cards.reduce("Cards: "){ "\($0.description), \($1.description)" })
         
-        printPairs(pair: getPair())
+        return self.cards.reduce("Cards: "){ "\($0.description), \($1.description)" }
     }
     
     //가장 높은 족보 출력
-    func getPair() -> Pair{
+    func getPair() -> String{
         var pairs = numberOfPairs()
         pairs.sort{
             $0 > $1
         }
         self.pair = pairs.first ?? Pair(num: .none, duplicate: 0)
-        return self.pair
-    }
-    
-    private func printPairs(pair: Pair){
-        print(pair.description)
+        
+        return self.pair.description
     }
     
     //Player의 갖고 있는 페어 확인
