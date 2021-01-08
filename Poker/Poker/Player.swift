@@ -16,7 +16,7 @@ class Player{
     let name: String
     private var cards: [Card] = []
     private var money: Int?
-    private var pair: Pair = Pair(num: .none, duplicate: 0)
+    var pair: Pair = Pair(num: .none, duplicate: 0)
     
     init(name: String) {
         self.name = name
@@ -97,20 +97,6 @@ extension Player.Pair: Comparable{
             return "트리플 - \(self.num.convertFromNumToString())"
         } else{
             return "포카드 - \(self.num.convertFromNumToString())"
-        }
-    }
-}
-
-extension Player: Comparable, Equatable{
-    static func == (lhs: Player, rhs: Player) -> Bool {
-        (lhs.pair.num == rhs.pair.num) && (lhs.pair.duplicate == rhs.pair.duplicate)
-    }
-    
-    static func <(lhs: Player, rhs: Player) -> Bool{
-        if lhs.pair.duplicate != rhs.pair.duplicate{
-            return lhs.pair.duplicate < rhs.pair.duplicate
-        }else{
-            return lhs.pair.num.rawValue < rhs.pair.num.rawValue
         }
     }
 }

@@ -80,7 +80,7 @@ class GameTable{
         }
         
         allOfPairs.sort{
-            $0 > $1
+            $0.pair > $1.pair
         }
         
         return allOfPairs[0].name
