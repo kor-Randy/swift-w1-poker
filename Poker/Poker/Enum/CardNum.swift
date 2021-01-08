@@ -8,10 +8,10 @@
 import Foundation
 
 enum CardNum: Int, CaseIterable{
-    case none = -1
     case joker = 0
     case one, two, three, four, five, six, seven, eight, nine, ten
     case jack, queen, king
+    case none
 }
 
 
